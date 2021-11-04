@@ -12,4 +12,22 @@ class CtripController extends Controller
 		$model = new CtripForm;
 		$model->seach_hotel();
 	}
+
+	public function actionDestination()
+	{
+		$model = new CtripForm;
+		$model->search_destination();
+	}
+
+	public function actionHotel()
+	{
+		$model = new CtripForm;
+		$model->seach_hotel();
+	}
+
+	public function actionNearbyHotel()
+	{
+		$model = new CtripForm;
+		$model->search_nearby_hotel();
+	}
 }
