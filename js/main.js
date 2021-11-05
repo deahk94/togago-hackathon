@@ -48,7 +48,7 @@ function search()
 
 function searchAPI(resetList = false)
 {
-	event.preventDefault();
+	//event.preventDefault();
 	var queryParam = "?locale=en_US&currency=USD&page_number=" + page;
 		queryParam += "&destination_id=" + destinationId;
 		if ($("#checkInDate").val()) {
@@ -121,7 +121,7 @@ function nearby()
 
 function nearbyAPI(resetList = false)
 {
-	event.preventDefault();
+	//event.preventDefault();
 	var queryParam = "?locale=en_US&currency=USD&page_number=" + page;
 		queryParam += "&latitude=" + lat + "&longitude=" + lon;
 		if ($("#checkInDate").val()) {
@@ -188,13 +188,13 @@ function nearbyAPI(resetList = false)
 }
 
 $("#searchButton").click(function () {
-	event.preventDefault();
+	//event.preventDefault();
 	search();
 	// $("#searchButton").prop("disabled",true);
 });
 
 $("#nearbyButton").click(function () {
-	event.preventDefault();
+	//event.preventDefault();
 	nearby();
 	// $("#searchButton").prop("disabled",true);
 });
