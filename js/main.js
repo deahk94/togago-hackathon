@@ -188,13 +188,13 @@ function nearbyAPI(resetList = false)
 }
 
 $("#searchButton").click(function () {
-	//event.preventDefault();
+	event.preventDefault();
 	search();
 	// $("#searchButton").prop("disabled",true);
 });
 
 $("#nearbyButton").click(function () {
-	//event.preventDefault();
+	event.preventDefault();
 	nearby();
 	// $("#searchButton").prop("disabled",true);
 });
