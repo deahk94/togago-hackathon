@@ -27,6 +27,7 @@ then(data => {
 
 function search()
 {
+	page = 1;
 	fetch("https://hotels-com-provider.p.rapidapi.com/v1/destinations/search?query=" + $("#cityName").val() + "&currency=USD&locale=en_US", {
 		"method": "GET",
 		"headers": {
@@ -48,7 +49,6 @@ function search()
 
 function searchAPI(resetList = false)
 {
-	//event.preventDefault();
 	var queryParam = "?locale=en_US&currency=USD&page_number=" + page;
 		queryParam += "&destination_id=" + destinationId;
 		if ($("#checkInDate").val()) {
@@ -94,11 +94,21 @@ function searchAPI(resetList = false)
 				$('#hotelList').empty();
 
 			if (response.searchResults.results.length < 0) {
-				$('#hotelList').append('<h4 id="searchResult">No search result!</h4>');
+				$('#hotelList').append('<h4 id="searchResult">Result ended!</h4>');
 				return;
 			}
 
 			$("#continueSearch").remove();
+
+			// In the case of there's no more request and the API are not returning correctly
+			if (response.searchResults.pagination.nextPageNumber == page && response.searchResults.pagination.currentPage != response.searchResults.pagination.nextPageNumber)
+			{
+				if ($('#searchResult').val())
+					$('#searchResult').value =" Search result ended!";
+				else
+					$('#hotelList').append('<h4 id="searchResult">Search result ended!</h4>');
+				return;
+			}
 
 			for (var i = 0; i < response.searchResults.results.length; i++) {
 				var hotelItem = response.searchResults.results[i];
@@ -116,12 +126,12 @@ function searchAPI(resetList = false)
 
 function nearby()
 {
+	page = 1;
 	nearbyAPI(true);
 }
 
 function nearbyAPI(resetList = false)
 {
-	//event.preventDefault();
 	var queryParam = "?locale=en_US&currency=USD&page_number=" + page;
 		queryParam += "&latitude=" + lat + "&longitude=" + lon;
 		if ($("#checkInDate").val()) {
@@ -166,12 +176,23 @@ function nearbyAPI(resetList = false)
 			if (resetList)
 				$('#hotelList').empty();
 
+			console.log();
 			if (response.searchResults.results.length < 0) {
 				$('#hotelList').append('<h4 id="searchResult">No search result!</h4>');
 				return;
 			}
 
 			$("#continueNearby").remove();
+
+			// In the case of there's no more request and the API are not returning correctly
+			if (response.searchResults.pagination.nextPageNumber == page && response.searchResults.pagination.currentPage != response.searchResults.pagination.nextPageNumber)
+			{
+				if ($('#searchResult'))
+					$('#searchResult').value =" Search result ended!";
+				else
+					$('#hotelList').append('<h4 id="searchResult">Search result ended!</h4>');
+				return;
+			}
 
 			for (var i = 0; i < response.searchResults.results.length; i++) {
 				var hotelItem = response.searchResults.results[i];

@@ -15,7 +15,6 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -90,13 +89,13 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active"><a href="./index.php">Home</a></li>
-                                    <li><a href="./room.php">Hotels</a></li>
+                                    <!-- <li><a href="./index.php">Home</a></li> -->
+                                    <li class="active"><a href="./room.html">Hotels</a></li>
                                     <!-- <li><a href="./about.html">About Us</a></li>
                                     <li><a href="#">Pages</a>
                                         <ul class="dropdown">
                                             <li><a href="./index.php">- Home</a></li>
-                                            <li><a href="./room.php">- Rooms</a></li>
+                                            <li><a href="./room.html">- Rooms</a></li>
                                             <li><a href="./single-room.html">- Single Rooms</a></li>
                                             <li><a href="./about.html">- About Us</a></li>
                                             <li><a href="./blog.html">- Blog</a></li>
@@ -123,7 +122,7 @@
 
                                 <!-- Book Now -->
                                 <div class="book-now-btn ml-3 ml-lg-5">
-                                    <a href="./room.php">Book Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                                    <a href="#">Book Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                             <!-- Nav End -->
@@ -135,519 +134,139 @@
     </header>
     <!-- Header Area End -->
 
-    <!-- Welcome Area Start -->
-    <section class="welcome-area">
-        <div class="welcome-slides owl-carousel">
-            <!-- Single Welcome Slide -->
-            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bg-img/16.jpg);" data-img-url="img/bg-img/16.jpg">
-                <!-- Welcome Content -->
-                <div class="welcome-content h-100">
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center">
-                            <!-- Welcome Text -->
-                            <div class="col-12">
-                                <div class="welcome-text text-center">
-                                    <h6 data-animation="fadeInLeft" data-delay="200ms">Hotel &amp; Resort</h6>
-                                    <h2 data-animation="fadeInLeft" data-delay="500ms">Welcome To Roberto</h2>
-                                    <a href="#" class="btn roberto-btn btn-2" data-animation="fadeInLeft" data-delay="800ms">Discover Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Welcome Slide -->
-            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bg-img/17.jpg);" data-img-url="img/bg-img/17.jpg">
-                <!-- Welcome Content -->
-                <div class="welcome-content h-100">
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center">
-                            <!-- Welcome Text -->
-                            <div class="col-12">
-                                <div class="welcome-text text-center">
-                                    <h6 data-animation="fadeInUp" data-delay="200ms">Hotel &amp; Resort</h6>
-                                    <h2 data-animation="fadeInUp" data-delay="500ms">Welcome To Roberto</h2>
-                                    <a href="#" class="btn roberto-btn btn-2" data-animation="fadeInUp" data-delay="800ms">Discover Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Welcome Slide -->
-            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bg-img/18.jpg);" data-img-url="img/bg-img/18.jpg">
-                <!-- Welcome Content -->
-                <div class="welcome-content h-100">
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center">
-                            <!-- Welcome Text -->
-                            <div class="col-12">
-                                <div class="welcome-text text-center">
-                                    <h6 data-animation="fadeInDown" data-delay="200ms">Hotel &amp; Resort</h6>
-                                    <h2 data-animation="fadeInDown" data-delay="500ms">Welcome To Roberto</h2>
-                                    <a href="#" class="btn roberto-btn btn-2" data-animation="fadeInDown" data-delay="800ms">Discover Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Welcome Area End -->
-
-    <!-- About Us Area Start -->
-    <section class="roberto-about-area section-padding-100-0">
-        <!-- Hotel Search Form Area -->
-        <div class="hotel-search-form-area">
-            <div class="container-fluid">
-                <div class="hotel-search-form">
-                    <form action="./room.php" method="post">
-                        <div class="row justify-content-between align-items-end">
-                            <div class="col-12 col-md-3">
-                                <label for="cityName">City Name</label>
-                                <input type="text" class="form-control" id="cityName" required>
-                            </div>
-                            <div class="col-6 col-md-2 col-lg-3">
-                                <label for="checkIn">Check In</label>
-                                <input type="date" class="form-control" id="checkIn" name="checkin-date" required>
-                            </div>
-                            <div class="col-6 col-md-2 col-lg-3">
-                                <label for="checkOut">Check Out</label>
-                                <input type="date" class="form-control" id="checkOut" name="checkout-date" required>
-                            </div>
-                            <div class="col-4 col-md-1">
-                                <label for="room">Room</label>
-                                <select name="room" id="room" class="form-control">
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                </select>
-                            </div>
-                            <div class="col-4 col-md-1">
-                                <label for="adults">Adult</label>
-                                <select name="adults" id="adults" class="form-control">
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                </select>
-                            </div>
-                            <div class="col-4 col-md-2 col-lg-1">
-                                <label for="children">Children</label>
-                                <select name="children" id="children" class="form-control">
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-md-12">
-                                <button type="submit" class="form-control btn roberto-btn w-100">Search Hotel</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div class="container mt-100">
-            <div class="row align-items-center">
-                <div class="col-12 col-lg-6">
-                    <!-- Section Heading -->
-                    <div class="section-heading wow fadeInUp" data-wow-delay="100ms">
-                        <h6>About Us</h6>
-                        <h2>Welcome to <br>Roberto Hotel Luxury</h2>
-                    </div>
-                    <div class="about-us-content mb-100">
-                        <h5 class="wow fadeInUp" data-wow-delay="300ms">With over 340 hotels worldwide, NH Hotel Group offers a wide variety of hotels catering for a perfect stay no matter where your destination.</h5>
-                        <p class="wow fadeInUp" data-wow-delay="400ms">Manager: <span>Michen Taylor</span></p>
-                        <img src="img/core-img/signature.png" alt="" class="wow fadeInUp" data-wow-delay="500ms">
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-6">
-                    <div class="about-us-thumbnail mb-100 wow fadeInUp" data-wow-delay="700ms">
-                        <div class="row no-gutters">
-                            <div class="col-6">
-                                <div class="single-thumb">
-                                    <img src="img/bg-img/13.jpg" alt="">
-                                </div>
-                                <div class="single-thumb">
-                                    <img src="img/bg-img/14.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="single-thumb">
-                                    <img src="img/bg-img/15.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About Us Area End -->
-
-    <!-- Service Area Start -->
-    <div class="roberto-service-area">
-        <div class="container">
-            <div class="row">
+    <!-- Breadcrumb Area Start -->
+    <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/16.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
                 <div class="col-12">
-                    <div class="service-content d-flex align-items-center justify-content-between">
-                        <!-- Single Service Area -->
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="100ms">
-                            <img src="img/core-img/icon-1.png" alt="">
-                            <h5>Transportion</h5>
-                        </div>
-
-                        <!-- Single Service Area -->
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                            <img src="img/core-img/icon-2.png" alt="">
-                            <h5>Reiseservice</h5>
-                        </div>
-
-                        <!-- Single Service Area -->
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="500ms">
-                            <img src="img/core-img/icon-3.png" alt="">
-                            <h5>Spa Relaxtion</h5>
-                        </div>
-
-                        <!-- Single Service Area -->
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="700ms">
-                            <img src="img/core-img/icon-4.png" alt="">
-                            <h5>Restaurant</h5>
-                        </div>
-
-                        <!-- Single Service Area -->
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="900ms">
-                            <img src="img/core-img/icon-1.png" alt="">
-                            <h5>Bar &amp; Drink</h5>
-                        </div>
+                    <div class="breadcrumb-content text-center">
+                        <h2 class="page-title">Our Room</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Room</li>
+                            </ol>
+                        </nav>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Service Area End -->
+    <!-- Breadcrumb Area End -->
 
-    <!-- Our Room Area Start -->
-    <section class="roberto-rooms-area">
-        <div class="rooms-slides owl-carousel">
-            <!-- Single Room Slide -->
-            <div class="single-room-slide d-flex align-items-center">
-                <!-- Thumbnail -->
-                <div class="room-thumbnail h-100 bg-img" style="background-image: url(img/bg-img/16.jpg);"></div>
-
-                <!-- Content -->
-                <div class="room-content">
-                    <h2 data-animation="fadeInUp" data-delay="100ms">Premium King Room</h2>
-                    <h3 data-animation="fadeInUp" data-delay="300ms">400$ <span>/ Day</span></h3>
-                    <ul class="room-feature" data-animation="fadeInUp" data-delay="500ms">
-                        <li><span><i class="fa fa-check"></i> Size</span> <span>: 30 ft</span></li>
-                        <li><span><i class="fa fa-check"></i> Capacity</span> <span>: Max persion 5</span></li>
-                        <li><span><i class="fa fa-check"></i> Bed</span> <span>: King Beds</span></li>
-                        <li><span><i class="fa fa-check"></i> Services</span> <span>: Wifi, Television, Bathroom</span></li>
-                    </ul>
-                    <a href="#" class="btn roberto-btn mt-30" data-animation="fadeInUp" data-delay="700ms">View Details</a>
-                </div>
-            </div>
-
-            <!-- Single Room Slide -->
-            <div class="single-room-slide d-flex align-items-center">
-                <!-- Thumbnail -->
-                <div class="room-thumbnail h-100 bg-img" style="background-image: url(img/bg-img/17.jpg);"></div>
-
-                <!-- Content -->
-                <div class="room-content">
-                    <h2 data-animation="fadeInUp" data-delay="100ms">Best King Room</h2>
-                    <h3 data-animation="fadeInUp" data-delay="300ms">125$ <span>/ Day</span></h3>
-                    <ul class="room-feature" data-animation="fadeInUp" data-delay="500ms">
-                        <li><span><i class="fa fa-check"></i> Size</span> <span>: 30 ft</span></li>
-                        <li><span><i class="fa fa-check"></i> Capacity</span> <span>: Max persion 5</span></li>
-                        <li><span><i class="fa fa-check"></i> Bed</span> <span>: King Beds</span></li>
-                        <li><span><i class="fa fa-check"></i> Services</span> <span>: Wifi, Television, Bathroom</span></li>
-                    </ul>
-                    <a href="#" class="btn roberto-btn mt-30" data-animation="fadeInUp" data-delay="700ms">View Details</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Our Room Area End -->
-
-    <!-- Testimonials Area Start -->
-    <section class="roberto-testimonials-area section-padding-100-0">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-6">
-                    <div class="testimonial-thumbnail owl-carousel mb-100">
-                        <img src="img/bg-img/10.jpg" alt="">
-                        <img src="img/bg-img/11.jpg" alt="">
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                    <!-- Section Heading -->
-                    <div class="section-heading">
-                        <h6>Testimonials</h6>
-                        <h2>Our Guests Love Us</h2>
-                    </div>
-                    <!-- Testimonial Slide -->
-                    <div class="testimonial-slides owl-carousel mb-100">
-
-                        <!-- Single Testimonial Slide -->
-                        <div class="single-testimonial-slide">
-                            <h5>“This can be achieved by applying search engine optimization or popularly known as SEO. This is a marketing strategy which increases the quality and quantity of traffic flow to a particular website via search engines.”</h5>
-                            <div class="rating-title">
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                </div>
-                                <h6>Robert Downey <span>- CEO Deercreative</span></h6>
-                            </div>
-                        </div>
-
-                        <!-- Single Testimonial Slide -->
-                        <div class="single-testimonial-slide">
-                            <h5>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus delectus facilis molestias, error vitae praesentium quos eaque qui ea, tempore blanditiis sint reprehenderit, quaerat. Commodi ab architecto sit suscipit exercitationem!”</h5>
-                            <div class="rating-title">
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                </div>
-                                <h6>Akash Downey <span>- CEO Deercreative</span></h6>
-                            </div>
-                        </div>
-
-                        <!-- Single Testimonial Slide -->
-                        <div class="single-testimonial-slide">
-                            <h5>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ex quos. Alias a rem maiores, possimus dicta sit distinctio quis iusto!”</h5>
-                            <div class="rating-title">
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                </div>
-                                <h6>Downey Sarah <span>- CEO Deercreative</span></h6>
-                            </div>
-                        </div>
-
-                        <!-- Single Testimonial Slide -->
-                        <div class="single-testimonial-slide">
-                            <h5>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sequi laboriosam fugit suscipit aspernatur, minima minus voluptatum, id ab atque similique ex earum. Magni.”</h5>
-                            <div class="rating-title">
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                </div>
-                                <h6>Robert Brown <span>- CEO Deercreative</span></h6>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Testimonials Area End -->
-
-    <!-- Projects Area Start -->
-    <section class="roberto-project-area">
-        <!-- Projects Slide -->
-        <div class="projects-slides owl-carousel">
-            <!-- Single Project Slide -->
-            <div class="single-project-slide active bg-img" style="background-image: url(img/bg-img/5.jpg);">
-                <!-- Project Text -->
-                <div class="project-content">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                    </div>
-                </div>
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
-                    </div>
-                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-            <!-- Single Project Slide -->
-            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/6.jpg);">
-                <!-- Project Text -->
-                <div class="project-content">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                    </div>
-                </div>
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
-                    </div>
-                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-            <!-- Single Project Slide -->
-            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/7.jpg);">
-                <!-- Project Text -->
-                <div class="project-content">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                    </div>
-                </div>
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
-                    </div>
-                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-            <!-- Single Project Slide -->
-            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/8.jpg);">
-                <!-- Project Text -->
-                <div class="project-content">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                    </div>
-                </div>
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
-                    </div>
-                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-            <!-- Single Project Slide -->
-            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/9.jpg);">
-                <!-- Project Text -->
-                <div class="project-content">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                    </div>
-                </div>
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
-                    </div>
-                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Projects Area End -->
-
-    <!-- Blog Area Start -->
-    <section class="roberto-blog-area section-padding-100-0">
+    <!-- Rooms Area Start -->
+    <div class="roberto-rooms-area section-padding-100-0">
         <div class="container">
             <div class="row">
-                <!-- Section Heading -->
-                <div class="col-12">
-                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
-                        <h6>Our Blog</h6>
-                        <h2>Latest News &amp; Event</h2>
-                    </div>
-                </div>
-            </div>
+                <div id="hotelList" class="col-12 col-lg-8">
+                    <h4 id="searchResult">No search result!</h4>
 
-            <div class="row">
-                <!-- Single Post Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-post-area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                        <a href="#" class="post-thumbnail"><img src="img/bg-img/2.jpg" alt=""></a>
-                        <!-- Post Meta -->
-                        <div class="post-meta">
-                            <a href="#" class="post-date">Jan 02, 2019</a>
-                            <a href="#" class="post-catagory">Event</a>
-                        </div>
-                        <!-- Post Title -->
-                        <a href="#" class="post-title">Learn How To Motivate Yourself</a>
-                        <p>How many free autoresponders have you tried? And how many emails did you get through using them?</p>
-                        <a href="index.php" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                    </div>
+                    <!-- Pagination -->
+                    <!-- <nav class="roberto-pagination wow fadeInUp mb-100" data-wow-delay="1000ms">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next <i class="fa fa-angle-right"></i></a></li>
+                        </ul>
+                    </nav> -->
                 </div>
 
-                <!-- Single Post Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-post-area mb-100 wow fadeInUp" data-wow-delay="500ms">
-                        <a href="#" class="post-thumbnail"><img src="img/bg-img/3.jpg" alt=""></a>
-                        <!-- Post Meta -->
-                        <div class="post-meta">
-                            <a href="#" class="post-date">Jan 02, 2019</a>
-                            <a href="#" class="post-catagory">Event</a>
-                        </div>
-                        <!-- Post Title -->
-                        <a href="#" class="post-title">What If Let You Run The Hubble</a>
-                        <p>My point here is that if you have no clue for the answers above you probably are not operating a followup.</p>
-                        <a href="index.php" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                <div class="col-12 col-lg-4">
+                    <!-- Hotel Reservation Area -->
+                    <div class="hotel-reservation--area mb-100">
+                        <form action="#" method="post">
+                            <div class="form-group mb-50">
+                                <label for="cityName">City Name</label>
+                                <input type="text" class="form-control" id="cityName">
+                            </div>
+                            <div class="form-group mb-30">
+                                <label for="checkInDate">Date</label>
+                                <div class="input-daterange" id="datepicker" format="yyyy-mm-dd">
+                                    <div class="row no-gutters">
+                                        <div class="col-6">
+                                            <input type="text" class="input-small form-control" id="checkInDate" name="checkInDate" placeholder="Check In" required>
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="text" class="input-small form-control" id="checkOutDate" name="checkOutDate" placeholder="Check Out" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="form-group mb-50">
+                                <div class="slider-range">
+                                    <div class="range-price">Max Price(USD) : $0 - $10000</div>
+                                    <div data-min="0" data-max="10000" data-unit="$" class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-value-min="0" data-value-max="10000" data-label-result="Max Price: ">
+                                        <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
+                                        <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
+                                        <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="form-group mb-30">
+                                <label for="guests">Guests</label>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <select name="adults" id="guests" class="form-control" required>
+                                            <option value="" disabled hidden>Adults</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <select name="children" id="children" class="form-control" disabled="">
+                                            <option value="children">Children</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-30">
+                                <label for="guests">Price Range (USD)</label>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label for="minPrice">Min</label>
+                                        <input type="number" class="form-control" id="minPrice" value=0>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="maxPrice">Max</label>
+                                        <input type="number" class="form-control" id="maxPrice" value=10000>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-50">
+                                <label for="sortBy">Sort By</label>
+                                <select name="sortBy" id="sortBy" class="form-control">
+                                    <option value="STAR_RATING_HIGHEST_FIRST">Highest - Star Rating</option>
+                                    <option value="STAR_RATING_LOWEST_FIRST">Lowest - Star Rating</option>
+                                    <option value="PRICE_HIGHEST_FIRST">Highest - Price</option>
+                                    <option value="PRICE">Lowest - Price</option>
+                                </select>
+                            </div>
+                            <br><br>
+                            <div class="form-group">
+                                <button id="searchButton" type="submit" class="btn roberto-btn w-100">Search</button>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <button id="nearbyButton" type="submit" class="btn roberto-btn w-100">Nearby Hotel</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-
-                <!-- Single Post Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-post-area mb-100 wow fadeInUp" data-wow-delay="700ms">
-                        <a href="#" class="post-thumbnail"><img src="img/bg-img/4.jpg" alt=""></a>
-                        <!-- Post Meta -->
-                        <div class="post-meta">
-                            <a href="#" class="post-date">Jan 02, 2019</a>
-                            <a href="#" class="post-catagory">Event</a>
-                        </div>
-                        <!-- Post Title -->
-                        <a href="#" class="post-title">Six Pack Abs The Big Picture</a>
-                        <p>Some good steps to take to ensure you are getting what you need out of a autoresponder include…</p>
-                        <a href="index.php" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </section>
-    <!-- Blog Area End -->
+    </div>
+    <!-- Rooms Area End -->
 
     <!-- Call To Action Area Start -->
     <section class="roberto-cta-area">
